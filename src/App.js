@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
+import Nav from './components/Nav';
+import Homee from './components/Homee';
+import Footer from './components/Footer';
+import MortgageCal from './components/MortgageCal';
+import StartApproval from './components/StartApproval';
+import About from './components/About';
+import SignIn from './components/SignIn';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Main />
+        <Footer />
+      </Router>
     </div>
+  );
+}
+
+function Main() {
+  const location = useLocation();
+  const showNav = location.pathname !== '/start-approval';
+
+  return (
+    <>
+      {showNav && <Nav />}
+      <Routes>
+        <Route path='/' element={<Homee />} />
+        <Route path='/calculator' element={<MortgageCal />} />
+        <Route path="/start-approval" element={<StartApproval />} />
+        <Route path='/about' element={<About/>}/>
+        <Route path='signin' element={<SignIn/>}/>
+
+      </Routes>
+    </>
   );
 }
 

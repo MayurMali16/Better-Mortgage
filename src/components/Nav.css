@@ -1,0 +1,170 @@
+
+
+.nav {
+  background-color: #004F47;
+  padding: 10px 20px;
+  position: relative; 
+  padding-top: 30px;
+  height: 40px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  display: inline;
+  padding: 0 15px;
+  color: white;
+  font-size: 1em;
+}
+
+li span {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #ff9800;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+
+i {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+  color: #ff9800;
+}
+
+
+.bars-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+  display: none; 
+  position: absolute; 
+  right: 12px; 
+ bottom: 5px;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; 
+  width: 250px;
+  height: 100%;
+  background-color: #004F47;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto; 
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  padding: 20px;
+  margin: 0;
+  list-style: none; 
+}
+
+.sidebar li {
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #005D56; 
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em; 
+}
+
+.sidebar a:hover {
+  color: #ff9800;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  display: none; 
+}
+
+
+@media (max-width: 768px) {
+  ul {
+    display: none; 
+  }
+
+  .bars-button {
+    display: block; 
+  }
+
+  .nav ul div:nth-child(2) {
+    display: none; 
+  }
+
+  .sidebar ul {
+    padding: 0;
+    display: block; 
+  }
+
+  .sidebar li {
+    padding: 20px; 
+  }
+
+  .overlay {
+    display: block; 
+  }
+}
+
+@media (max-width: 480px) {
+  li span {
+    font-size: 1.2em; 
+  }
+
+  i {
+    font-size: 1.8em; 
+    padding: 15px;
+  }
+}

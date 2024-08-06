@@ -1,0 +1,92 @@
+
+.start-approval {
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.top-bar h3{
+  color: green;
+  padding-left: 50px;
+  font-size: 20px;
+}
+.contact-info{
+  font-size: 14px;
+  color: #333;
+ padding-right: 50px;
+ font-size: 20px;
+}
+
+
+.start-approval-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .start-approval-content {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .option-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .option-button:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  .option-icon {
+    margin-right: 1rem;
+    font-size: 40px;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .stat-item p {
+    color: #666;
+  }
+  
